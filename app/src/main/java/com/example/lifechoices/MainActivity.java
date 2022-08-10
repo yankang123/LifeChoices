@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 //            actionBar.hide();
 //        }
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
+
 
         View dialogview = getLayoutInflater().inflate(R.layout.layou_dialog_view, null);
         final EditText editText = (EditText) dialogview.findViewById(R.id.dialog_edit);
