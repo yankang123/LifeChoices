@@ -9,10 +9,15 @@
         android:background="@color/teal_200"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <TextView
-            android:text="只能有我呗"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"></TextView>
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent">
+         <androidx.recyclerview.widget.RecyclerView
+             android:id="@+id/recy"
+             android:layout_width="match_parent"
+             android:layout_height="60dp">
+         </androidx.recyclerview.widget.RecyclerView>
+     </LinearLayout>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:fitsSystemWindows="true"

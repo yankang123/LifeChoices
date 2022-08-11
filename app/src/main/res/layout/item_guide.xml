@@ -7,7 +7,7 @@
     android:id="@+id/img_item_drawer_recy"
      android:layout_alignParentLeft="true"
     android:layout_width="30dp"
-    android:layout_height="match_parent"></ImageView>
+    android:layout_height="match_parent"/>
  <TextView
      android:layout_toRightOf="@+id/img_item_drawer_recy"
      android:layout_marginStart="10dp"
@@ -16,14 +16,13 @@
      android:layout_marginLeft="10dp"
      android:id="@+id/text_item_drawer_recy_content"
      android:layout_width="wrap_content"
-     android:layout_height="match_parent"></TextView>
+     android:layout_height="match_parent"/>
     <TextView
         android:layout_alignParentRight="true"
         android:textSize="23sp"
-        android:background="@color/teal_200"
         android:gravity="center_vertical"
         android:layout_marginEnd="10dp"
         android:id="@+id/text_item_drawer_recy_count"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"></TextView>
+        android:layout_height="match_parent"/>
 </RelativeLayout>

@@ -7,21 +7,20 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-
-import com.bumptech.glide.Glide;
-import com.example.lifechoices.MyApplication;
-import com.example.lifechoices.R;
-
-import java.util.List;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.example.lifechoices.R;
+import com.example.lifechoices.roomb.DrawerItem;
+
+import java.util.List;
+
 
 public class GuideAdapter extends RecyclerView.Adapter<GuideAdapter.ViewHolder> {
-private List<Guide> list ;
+private List<DrawerItem> list ;
 private Context context;
-    public GuideAdapter(List<Guide> list,Context context) {
+    public GuideAdapter(List<DrawerItem> list, Context context) {
 
         this.list = list;
         this.context = context;
