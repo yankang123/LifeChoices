@@ -11,6 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.lifechoices.R;
+import com.example.lifechoices.roomb.AppDatabasefensh;
+import com.example.lifechoices.roomb.UserDao;
 
 import java.util.List;
 
@@ -27,14 +29,15 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_layout, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_progress_layout, parent, false);
 
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        double sum = (double) list.get(position).getSum();
+        UserDao userDao = AppDatabasefensh.Companion.getDatabase(context).itemDao();
+        double sum = (double) userDao.loadbyPosition(Item.position).get(0).getFenshu();
         int imgId = list.get(position).getImgId();
 //         Glide.with(context).load(imgId).into(holder.imageView);
         double count = Math.floor(((double) sum / 20));
@@ -71,7 +74,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             imageView = itemView.findViewById(R.id.img);
         }
     }
-
+//伸缩和旋转动画
     public void presentAnimate(ImageView imageView) {
         ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(imageView, "rotation", 0f, 35f, -35f, 0f, -35);
         objectAnimator.setDuration(1500);

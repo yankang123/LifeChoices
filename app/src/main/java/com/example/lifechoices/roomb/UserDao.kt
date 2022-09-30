@@ -17,8 +17,8 @@ interface UserDao {
 
     @Query("select * from user")
     fun loadAllUsers(): List<User>
-
-
+    @Query("select * from user where position=:inPosition")
+    fun loadbyPosition(inPosition : Int): List<User>
 
     @Delete
     fun deleteUser(user: User)

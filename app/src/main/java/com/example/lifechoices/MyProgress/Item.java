@@ -2,6 +2,7 @@ package com.example.lifechoices.MyProgress;
 
 public class Item {
     public static int sum;
+    public static int position=0;
     private int imgId;
 
     public Item(int imgId) {

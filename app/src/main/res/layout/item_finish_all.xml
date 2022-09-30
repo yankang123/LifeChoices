@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+
+    android:layout_margin="5dp"
+    app:cardCornerRadius="5dp"
+    app:layout_constraintCircleRadius="50dp"
+    android:background="@color/teal_700"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:id="@+id/layout_point_hook"
+        android:layout_margin="10dp"
+        android:padding="4dp"
+        android:layout_gravity="top"
+        android:background="@drawable/item_point"
+        android:layout_width="25dp"
+        android:layout_height="25dp">
+        <ImageView
+            android:id="@+id/image_hook"
+            android:src="@drawable/icon_hook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></ImageView>
+    </LinearLayout>
+    <TextView
+    android:textColor="@color/white"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/fenshu"
+        android:textSize="18sp"
+        android:layout_marginRight="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+    <TextView
+
+        android:layout_gravity="center"
+        android:id="@+id/finish_text_two"
+        android:background="@null"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></TextView>
+
+</LinearLayout>

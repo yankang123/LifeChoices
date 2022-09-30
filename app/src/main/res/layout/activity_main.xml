@@ -10,6 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
      <LinearLayout
+         android:background="@color/black"
+         android:orientation="vertical"
          android:layout_width="match_parent"
          android:layout_height="match_parent">
          <androidx.recyclerview.widget.RecyclerView
@@ -17,7 +19,22 @@
              android:layout_width="match_parent"
              android:layout_height="60dp">
          </androidx.recyclerview.widget.RecyclerView>
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/recy_main"
+android:background="@color/teal_200"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+</androidx.recyclerview.widget.RecyclerView>
      </LinearLayout>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/float_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:src="@drawable/add"
+            />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:fitsSystemWindows="true"

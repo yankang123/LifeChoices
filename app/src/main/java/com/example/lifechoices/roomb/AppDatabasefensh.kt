@@ -16,7 +16,8 @@ abstract class AppDatabasefensh : RoomDatabase() {//TODO(fault_Memory:@有个波
         @Synchronized
         fun getDatabase(context: Context): AppDatabasefensh {
            instance?.let { return it }
-            return Room.databaseBuilder(context.applicationContext, AppDatabasefensh::class.java,"app_database")
+            //"app_database3"该名字相同可能会出问题，重进app的时候数据全部丢失
+            return Room.databaseBuilder(context.applicationContext, AppDatabasefensh::class.java,"app_database3")
                 .fallbackToDestructiveMigration() .allowMainThreadQueries()  .build().apply { instance =this }
         }
     }

@@ -14,6 +14,10 @@ interface ItemDao {
     fun updateItem(item: Item)
     @Query("SELECT * FROM Item")
     fun loadAllItems(): List<Item>
+
+    @Query("SELECT * FROM Item where drawerPosition = :position")
+    fun loadAllItemsByPosition(position : Int): List<Item>
+
     @Query("SELECT * FROM Item where isChecked==1")
     fun loadAllItemsChecked(): List<Item>
     @Query("SELECT * FROM Item where isChecked==0")

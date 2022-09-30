@@ -21,12 +21,12 @@ abstract class AppDatabaseDrawer : RoomDatabase() {//TODO(fault_Memory:@有个�
 
     abstract fun DrawerItemDao(): DrawerItemDao
 
-   public companion object {
+  companion object {
         private var instance: AppDatabaseDrawer? = null
         @Synchronized
-      public  fun getDatabase(context: Context): AppDatabaseDrawer {
+    fun getDatabase(context: Context): AppDatabaseDrawer {
             instance?.let { return it }
-            return Room.databaseBuilder(context.applicationContext, AppDatabaseDrawer::class.java,"app_database")
+            return Room.databaseBuilder(context.applicationContext, AppDatabaseDrawer::class.java,"app_database2")
                 .fallbackToDestructiveMigration() .allowMainThreadQueries()  .build().apply { instance =this }
         }
     }
